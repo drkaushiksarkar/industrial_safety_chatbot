@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			ML App
+		</div>
+		<h2>Accident Detector</h2>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:20;text-align: center;"><b>Accident Grade</b></p>
+	<div class="results">
+
+	Your accident grade  is {{prediction}}
+	
+	
+	{% if Day == 'Monday'%}
+	<h2 style="color:blue;">Thanks for the information. We have noted your details. The Health Safety Officer will reach out shortly for more support!</h2>
+	{% elif Day == 'Tuesday'%}
+	<h2 style="color:blue;">Thanks for the information. We have noted your details. The Health Safety Officer will reach out shortly for more support!</h2>
+	{% elif Day == 'Wednesday'%}
+	<h2 style="color:blue;">Thanks for the information. We have noted your details. The Health Safety Officer will reach out shortly for more support!</h2>
+	{% elif Day == 'Thursday'%}
+	<h2 style="color:blue;">Thanks for the information. We have noted your details. The Health Safety Officer will reach out shortly for more support!</h2>
+	{% elif Day == 'Friday'%}
+	<h2 style="color:blue;">Thanks for the information. We have noted your details. The Health Safety Officer will reach out shortly for more support!</h2>
+	{% elif Day == 'Saturday'%}
+	<h2 style="color:red;">Sorry, it's a weekend! Therefore, our responses may be delayed. If you have a high-grade injury immediately contact the nearest hospital. Our Health Safety Officer will reach out to you on Monday. Please call the Insurance Support Center if you are eligible.</h2>
+	{% elif Day == 'Sunday'%}
+	<h2 style="color:red;">Sorry, it's a weekend! Therefore, our responses may be delayed. If you have a high-grade injury immediately contact the nearest hospital. Our Health Safety Officer will reach out to you on Monday. Please call the Insurance Support Center if you are eligible.</h2>
+	{% endif %}	
+	
+	{% if prediction == ['high-grade']%}
+	<h2 style="color:red;">You probably have a high grade injury. Please reach out to the HSO or the nearest hospital immediately.</h2>
+	{% elif prediction == ['low-grade']%}
+	<h2 style="color:blue;">Hey, just chill! It's probably a low-grade injury. Get the fast-aid and you will be ok.</h2>
+	{% endif %}
+	{% if prediction_2 == 'low-grade'%}
+	<h2 style="color:blue;">Irrespective of your current injury status, based on your personal details and risk exposure your risk for accident is low. Please follow the safety rules carefully for an accident-free life.</h2>
+	{% elif prediction_2 == 'high-grade'%}
+	<h2 style="color:red;">Irrespective of your current injury status, based on your personal details and risk exposure your risk for accident is high. Our HSO will contact you soon for refresher training on workplace safety.</h2>
+	{% endif %}
+	
+	</div>
+
+</body>
+</html>
