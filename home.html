@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			ChatBot App with Flask
+		</div>
+		<h2>Accident Detector</h2>
+		
+	</div>
+	</header>
+
+	<div class="ml-container">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+		<h1>When did the accident took place?</h1>
+		<form action="/action_page.php">
+  			<label for="Date">Date of Accident:</label>
+  			<input type="date" id="Date" name="Date">
+  			
+			<br>
+			 
+		<h1>Provide your personal details below</h1>
+		<form action="/action_page.php">
+  			<p>Please select your country:</p>
+  			<input type="radio" id="Country_01" name="Country" value="Country_01">
+  			<label for="Country_01">01</label><br>
+  			<input type="radio" id="Country_02" name="Country" value="Country_02">
+  			<label for="Country_02">02</label><br>
+  			<input type="radio" id="Country_03" name="Country" value="Country_03">
+  			<label for="Country_03">03</label>
+
+  			<br>  
+  
+  			<p>Please select your local:</p>
+  			<input type="radio" id="Local_01" name="Local" value="Local_01">
+  			<label for="Local_01">01</label><br>
+  			<input type="radio" id="Local_02" name="Local" value="Local_02">
+  			<label for="Local_02">02</label><br>
+  			<input type="radio" id="Local_03" name="Local" value="Local_03">
+  			<label for="Local_03">03</label><br>
+  			<input type="radio" id="Local_04" name="Local" value="Local_04">
+  			<label for="Local_04">04</label><br>
+  			<input type="radio" id="Local_05" name="Local" value="Local_05">
+  			<label for="Local_05">05</label><br>
+  			<input type="radio" id="Local_06" name="Local" value="Local_06">
+  			<label for="Local_06">06</label><br>
+  			<input type="radio" id="Local_07" name="Local" value="Local_07">
+  			<label for="Local_07">07</label><br>
+  			<input type="radio" id="Local_08" name="Local" value="Local_08">
+  			<label for="Local_08">08</label><br>
+  			<input type="radio" id="Local_09" name="Local" value="Local_09">
+  			<label for="Local_09">09</label><br>
+  			<input type="radio" id="Local_10" name="Local" value="Local_10">
+  			<label for="Local_10">10</label><br>
+  			<input type="radio" id="Local_11" name="Local" value="Local_11">
+  			<label for="Local_11">11</label><br>
+ 			 <input type="radio" id="Local_12" name="Local" value="Local_12">
+  			<label for="Local_12">12</label>
+  
+  			<br>  
+
+  			<p>Please select your gender:</p>
+  			<input type="radio" id="Male" name="Gender" value="Male">
+  			<label for="Male">M</label><br>
+  			<input type="radio" id="Female" name="Gender" value="Female">
+  			<label for="Female">F</label>
+  
+  			<br>  
+
+  			<p>Please select your industry:</p>
+  			<input type="radio" id="Mining" name="Industry Sector" value="Mining">
+  			<label for="Mining">Mining</label><br>
+  			<input type="radio" id="Metals" name="Industry Sector" value="Metals">
+  			<label for="Metals">Metals</label><br>  
+  			<input type="radio" id="Others" name="Industry Sector" value="Others">
+  			<label for="Others">Others</label>
+  
+  			<br>  
+
+  			<p>Please select your employee type:</p>
+  			<input type="radio" id="Employee" name="Employee Type" value="Employee">
+  			<label for="Employee">Employee</label><br>
+  			<input type="radio" id="Third Party" name="Employee Type" value="Third Party">
+  			<label for="Third Party">Third Party</label><br>  
+  			<input type="radio" id="Third Party (Remote)" name="Employee Type" value="Third Party (Remote)">
+  			<label for="Third Party (Remote)">Third Party (Remote)</label>
+  
+  			<br>  
+
+  			<p>Please select from below if you are exposed to any:</p>
+  			<input type="radio" id="Pressed" name="Critical Risk" value="Pressed">
+  			<label for="Pressed">Pressed</label><br>
+  			<input type="radio" id="Pressurized Systems" name="Critical Risk" value="Pressurized Systems">
+  			<label for="Pressurized Systems">Pressurized Systems</label><br>
+  			<input type="radio" id="Manual Tools" name="Critical Risk" value="Manual Tools">
+  			<label for="Manual Tools">Manual Tools</label><br>
+  			<input type="radio" id="Fall prevention (same level)" name="Critical Risk" value="Fall prevention (same level)">
+  			<label for="Fall prevention (same level)">Fall prevention (same level)</label><br>
+  			<input type="radio" id="Chemical substances" name="Critical Risk" value="Chemical substances">
+  			<label for="Chemical substances">Chemical substances</label><br>
+  			<input type="radio" id="Liquid Metal" name="Critical Risk" value="Liquid Metal">
+  			<label for="Liquid Metal">Liquid Metal</label><br>
+  			<input type="radio" id="Electrical installation" name="Critical Risk" value="Electrical installation">
+  			<label for="Electrical installation">Electrical installation</label><br>
+  			<input type="radio" id="Confined space" name="Critical Risk" value="Confined space">
+  			<label for="Confined space">Confined space</label><br>
+  			<input type="radio" id="Pressurized Systems / Chemical Substances" name="Critical Risk" value="Pressurized Systems / Chemical Substances">
+  			<label for="Pressurized Systems / Chemical Substances">Pressurized Systems / Chemical Substances</label><br>
+  			<input type="radio" id="Blocking and isolation of energies" name="Critical Risk" value="Blocking and isolation of energies">
+  			<label for="Blocking and isolation of energies">Blocking and isolation of energies</label><br>
+  			<input type="radio" id="Suspended Loads" name="Critical Risk" value="Suspended Loads">
+  			<label for="Suspended Loads">Suspended Loads</label><br>
+  			<input type="radio" id="Poll" name="Critical Risk" value="Poll">
+  			<label for="Poll">Poll</label><br>
+  			<input type="radio" id="Cut" name="Critical Risk" value="Cut">
+  			<label for="Cut">Cut</label><br>
+  			<input type="radio" id="Fall" name="Critical Risk" value="Fall">
+  			<label for="Fall">Fall</label><br>
+  			<input type="radio" id="Bees" name="Critical Risk" value="Bees">
+  			<label for="Bees">Bees</label><br>
+  			<input type="radio" id="Fall prevention" name="Critical Risk" value="Fall prevention">
+  			<label for="Fall prevention">Fall prevention</label><br>
+  			<input type="radio" id="Traffic" name="Critical Risk" value="Traffic">
+  			<label for="Traffic">Traffic</label><br>
+  			<input type="radio" id="Projection" name="Critical Risk" value="Projection">
+  			<label for="Projection">Projection</label><br>
+  			<input type="radio" id="Venomous Animals" name="Critical Risk" value="Venomous Animals">
+  			<label for="Venomous Animals">Venomous Animals</label><br>
+  			<input type="radio" id="Plates" name="Critical Risk" value="Plates">
+  			<label for="Plates">Plates</label><br>
+  			<input type="radio" id="Projection/Burning" name="Critical Risk" value="Projection/Burning">
+  			<label for="Projection/Burning">Projection/Burning</label><br>
+  			<input type="radio" id="remains of choco" name="Critical Risk" value="remains of choco">
+  			<label for="remains of choco">remains of choco</label><br>
+  			<input type="radio" id="Vehicles and Mobile Equipment" name="Critical Risk" value="Vehicles and Mobile Equipment">
+  			<label for="Vehicles and Mobile Equipment">Vehicles and Mobile Equipment</label><br>
+  			<input type="radio" id="Projection/Choco" name="Critical Risk" value="Projection/Choco">
+  			<label for="Projection/Choco">Projection/Choco</label><br>
+  			<input type="radio" id="Machine Protection" name="Critical Risk" value="Machine Protection">
+  			<label for="Machine Protection">Machine Protection</label><br>
+  			<input type="radio" id="Power lock" name="Critical Risk" value="Power lock">
+  			<label for="Power lock">Power lock</label><br>
+  			<input type="radio" id="Burn" name="Critical Risk" value="Burn">
+  			<label for="Burn">Burn</label><br>
+  			<input type="radio" id="Projection/Manual Tools" name="Critical Risk" value="Projection/Manual Tools">
+  			<label for="Projection/Manual Tools">Projection/Manual Tools</label><br>
+  			<input type="radio" id="Individual protection equipment" name="Critical Risk" value="Individual protection equipment">
+  			<label for="Individual protection equipment">Individual protection equipment</label><br>
+  			<input type="radio" id="Electrical Shock" name="Critical Risk" value="Electrical Shock">
+  			<label for="Electrical Shock">Electrical Shock</label><br>
+  			<input type="radio" id="Projection of fragments" name="Critical Risk" value="Projection of fragments">
+  			<label for="Projection of fragments">Projection of fragments</label><br>
+  			<input type="radio" id="\nNot applicable" name="Critical Risk" value="\nNot applicable">
+  			<label for="\nNot applicable">Not applicable</label><br>
+  			<input type="radio" id="Others" name="Critical Risk" value="Others">
+  			<label for="Others">Others</label><br><br>
+		
+		<p>Enter Your Complaint Here</p>
+		<!-- <input type="text" name="comment"/> -->
+		<textarea name="message" rows="4" cols="50"></textarea>
+		<br/>
+
+		<input type="submit" class="btn-info" value="predict">
+		
+	</form>
+		
+	</div>
+
+	
+	
+
+</body>
+</html>
