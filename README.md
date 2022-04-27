@@ -90,6 +90,18 @@ Input: Pickled model from milestone 2
 ‣ **Submission: Final report**
 
 
+**Project Team:**
+
+Amol Bulbule,
+Dr. Kaushik Sarkar,
+Manoj Vardhan,
+Suresh Rajagopalan,
+Venkatesh Chandiran
+
+
 **Acknowledgement:**
-Greatlearning,
-University of Texas at Austin
+Greatlearning Team,
+University of Texas at Austin Faculty,
+Great learning Mentor Mr. Srikanth Girijala
+
+
