@@ -84,10 +84,10 @@ Input: Pickled model from milestone 2
 ‣ Step 3: Design a clickable UI based chatbot interface
 
 
-‣ Output: Clickable UI based chatbot interface which accepts text as input and replies back with relevant answers.
+Output: Clickable UI based chatbot interface which accepts text as input and replies back with relevant answers.
 
 
-‣ **Submission: Final report**
+**Submission: Final report**
 
 
 **Project Team:**
